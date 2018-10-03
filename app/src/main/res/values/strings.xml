@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpleDraw</string>
+    <string name="photo_preview">PhotoPreview</string>
+    <string name="photo_expanded">PhotoExpanded</string>
 </resources>
