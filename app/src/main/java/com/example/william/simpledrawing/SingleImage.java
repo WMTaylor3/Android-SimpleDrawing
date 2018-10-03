@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 
 public class SingleImage extends AppCompatActivity
@@ -25,21 +26,25 @@ public class SingleImage extends AppCompatActivity
         setContentView(R.layout.photo_expanded);
 
         Intent intent = getIntent();
-        Uri imageURI = Uri.parse(intent.getStringExtra("Location"));
-        Integer imageRotation = intent.getIntExtra("Orientation", 0);
+        final Uri imageURI = Uri.parse(intent.getStringExtra("Location"));
+        final Integer imageRotation = intent.getIntExtra("Orientation", 0);
         imageView = findViewById(R.id.photo);
         imageView.setImageURI(imageURI);
         imageView.setRotation(imageRotation);
 
-        imageView=findViewById(R.id.photo);
+        imageView = findViewById(R.id.photo);
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(SingleImage.this, EditImage.class);
+                intent.putExtra("ImageAddress", imageURI);
+                intent.putExtra("Orientation", imageRotation);
+                startActivity(intent);
             }
         });
     }
@@ -64,7 +69,6 @@ public class SingleImage extends AppCompatActivity
         }
     }
 //CODE FROM ASSIGNMENT 2 BETWEEN THIS END COMMENT AND CORRESPONDING START COMMENT
-
 
 
 }

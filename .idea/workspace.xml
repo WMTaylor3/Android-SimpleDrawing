@@ -7,26 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ac5eb43-4012-4289-9d27-29de5b474760" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/SingleImage.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_mode_edit_white.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/photo_edit.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/photo_expanded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/photo_preview.xml" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/SingleImage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/SingleImage.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="photo_preview.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="photo_preview.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_preview.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -82,8 +66,8 @@
       <file leaf-file-name="photo_expanded.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_expanded.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+            <state relative-caret-position="-107">
+              <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -108,38 +92,51 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+            <state relative-caret-position="530">
+              <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
               <folding>
                 <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onSaveInstanceState#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRestoreInstanceState#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#4126:4344" expanded="false" />
+                <element signature="class#4111:4329" expanded="false" />
+                <element signature="e#4372#4980#0" expanded="true" />
+                <element signature="e#4979#4980#0" expanded="true" />
+                <element signature="e#5097#5385#0" expanded="true" />
+                <element signature="e#5384#5385#0" expanded="true" />
                 <element signature="method#catalogueImages#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addBitmapToMemoryCache#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#ImageDetails#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#ImageContainer#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#ImageAdapter#0;class#ImageAdapter#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getView#0;class#ImageAdapter#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#8631:10313" expanded="false" />
+                <element signature="class#8622:10261" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SingleImage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SingleImage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/SingleImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state relative-caret-position="283">
+              <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1398#1666#0" expanded="true" />
-                <element signature="e#1665#1666#0" expanded="true" />
+                <element signature="e#1447#1826#0" expanded="true" />
                 <element signature="method#onTouchEvent#0;class#SingleImage#0" expanded="false" />
                 <element signature="class#ScaleListener#0;class#SingleImage#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditImage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,6 +157,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -2185,13 +2183,13 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/photo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/photo_preview.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/SingleImage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/photo_edit.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/photo_expanded.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/SingleImage.java" />
       </list>
     </option>
   </component>
@@ -2325,6 +2323,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="device.picker.selection" value="23f4c575ff1c7ece" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -2500,6 +2499,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2517,7 +2517,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2642,39 +2642,28 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/SingleImage.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_preview.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="86" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1398#1666#0" expanded="true" />
-            <element signature="e#1665#1666#0" expanded="true" />
-            <element signature="method#onTouchEvent#0;class#SingleImage#0" expanded="false" />
-            <element signature="class#ScaleListener#0;class#SingleImage#0" expanded="false" />
+            <element signature="e#410#433#0" expanded="true" />
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_expanded.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-          <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onSaveInstanceState#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRestoreInstanceState#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#4126:4344" expanded="false" />
-            <element signature="method#catalogueImages#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addBitmapToMemoryCache#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#ImageDetails#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#ImageContainer#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#ImageAdapter#0;class#ImageAdapter#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getView#0;class#ImageAdapter#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#8631:10313" expanded="false" />
-          </folding>
+        <state relative-caret-position="-107">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_edit.xml">
@@ -2688,28 +2677,50 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_expanded.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_preview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="86" />
+        <state relative-caret-position="530">
+          <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
           <folding>
-            <element signature="e#410#433#0" expanded="true" />
+            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onSaveInstanceState#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRestoreInstanceState#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#4111:4329" expanded="false" />
+            <element signature="e#4372#4980#0" expanded="true" />
+            <element signature="e#4979#4980#0" expanded="true" />
+            <element signature="e#5097#5385#0" expanded="true" />
+            <element signature="e#5384#5385#0" expanded="true" />
+            <element signature="method#catalogueImages#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#addBitmapToMemoryCache#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#ImageDetails#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#ImageContainer#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#ImageAdapter#0;class#ImageAdapter#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getView#0;class#ImageAdapter#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#8622:10261" expanded="false" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/SingleImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1447#1826#0" expanded="true" />
+            <element signature="method#onTouchEvent#0;class#SingleImage#0" expanded="false" />
+            <element signature="class#ScaleListener#0;class#SingleImage#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

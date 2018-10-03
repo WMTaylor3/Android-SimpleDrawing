@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)
     {
-        switch(requestCode)
+        switch (requestCode)
         {
             case REQUEST_TO_READ_EXTERNAL_STORAGE:
             {
@@ -77,8 +77,7 @@ public class MainActivity extends AppCompatActivity
                 {
                     //Permission Denied. Close app.
                     finish();
-                }
-                else
+                } else
                 {
                     initialize();
                 }
@@ -141,9 +140,11 @@ public class MainActivity extends AppCompatActivity
         });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -158,14 +159,14 @@ public class MainActivity extends AppCompatActivity
     private ArrayList<ImageDetails> catalogueImages()
     {
         String dateAdded = MediaStore.Images.Media.DATE_ADDED;
-        String[] detailsToPull = { MediaStore.Images.Media.DATA, MediaStore.Images.Media.ORIENTATION };
+        String[] detailsToPull = {MediaStore.Images.Media.DATA, MediaStore.Images.Media.ORIENTATION};
         Cursor cursor = getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, detailsToPull, null, null, dateAdded);
 
         ArrayList<ImageDetails> detailsToReturn = new ArrayList<>();
 
         int imageCount = cursor.getCount();
 
-        for(int i = 0; i < imageCount; i++)
+        for (int i = 0; i < imageCount; i++)
         {
             cursor.moveToPosition(i);
             int dataIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
@@ -240,7 +241,7 @@ public class MainActivity extends AppCompatActivity
         @Override
         public int getCount()
         {
-            return countImages() ;
+            return countImages();
         }
 
         @Override
@@ -253,8 +254,7 @@ public class MainActivity extends AppCompatActivity
                 photo = new ImageContainer();
                 photo.thumbnail = convertView.findViewById(R.id.photo);
                 convertView.setTag(photo);
-            }
-            else
+            } else
             {
                 photo = (ImageContainer) convertView.getTag();
             }
@@ -283,15 +283,13 @@ public class MainActivity extends AppCompatActivity
                         if (cachedThumbnail != null)
                         {
                             return cachedThumbnail;
-                        }
-                        else
+                        } else
                         {
                             Bitmap bmp = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(photo.path, pixel), Resources.getSystem().getDisplayMetrics().widthPixels / 4, Resources.getSystem().getDisplayMetrics().widthPixels / 4);
                             addBitmapToMemoryCache(photo.path, bmp);
                             return bmp;
                         }
-                    }
-                    catch (Exception exc)
+                    } catch (Exception exc)
                     {
                         exc.printStackTrace();
                     }
@@ -301,7 +299,7 @@ public class MainActivity extends AppCompatActivity
                 @Override
                 protected void onPostExecute(Bitmap bmp)
                 {
-                    if(photo.position == i)
+                    if (photo.position == i)
                     {
                         photo.thumbnail.setImageBitmap(bmp);
                         photo.thumbnail.setRotation(listOfImageDetails.get(i).orientation);
