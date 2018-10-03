@@ -2,4 +2,8 @@
     <string name="app_name">SimpleDraw</string>
     <string name="photo_preview">PhotoPreview</string>
     <string name="photo_expanded">PhotoExpanded</string>
+    <string name="color_preview">ColorPreview</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
 </resources>

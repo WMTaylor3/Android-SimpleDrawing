@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:height="@dimen/slider_button"
+        android:width="@dimen/slider_button"
+        />
+    <solid android:color="@color/button_blue"/>
+</shape>

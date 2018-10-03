@@ -3,4 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="button_red">#FF0000</color>
+    <color name="button_green">#00FF00</color>
+    <color name="button_blue">#0000FF</color>
+    <color name="slider_background">#ABABAB</color>
+    <color name="slider_progress_red">#FFA0A0</color>
+    <color name="slider_progress_green">#A0FFA0</color>
+    <color name="slider_progress_blue">#A0A0FF</color>
+    <color name="slider_secondary">#808080</color>
 </resources>

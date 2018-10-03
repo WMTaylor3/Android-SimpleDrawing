@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="slider_bar">6dp</dimen>
+    <dimen name="slider_button">24dp</dimen>
 </resources>
