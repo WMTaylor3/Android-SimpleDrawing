@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                Intent intent = new Intent(MainActivity.this, SingleImage.class);
+                Intent intent = new Intent(MainActivity.this, ExpandedImage.class);
                 String imageLocation = listOfImageDetails.get(position).path;
                 Integer imageRotation = listOfImageDetails.get(position).orientation;
                 intent.putExtra("Location", imageLocation);
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity
         //--------------------------------------------------------------------------------------------//
         //---CODE WRITTEN FOR ASSIGNMENT 3 BETWEEN THIS START COMMENT AND CORRESPONDING END COMMENT---//
         //--------------------------------------------------------------------------------------------//
-        FloatingActionButton newDrawing = findViewById(R.id.fab);
+        FloatingActionButton newDrawing = findViewById(R.id.newImage);
         newDrawing.setOnClickListener(new View.OnClickListener()
         {
             @Override

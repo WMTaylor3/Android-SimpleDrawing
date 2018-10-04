@@ -1,17 +1,19 @@
 package com.example.william.simpledrawing;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 public class EditImage extends AppCompatActivity
 {
     // -- Variables and Constants -- //
-    public static final int REQUEST_CODE = 1;
-    private int selectedColor;
+    private int selectedColor = 0;
 
     // -- Override Methods -- //
     @Override
@@ -20,14 +22,18 @@ public class EditImage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo_edit);
 
-        FloatingActionButton openColorPicker = findViewById(R.id.fab);
+        FloatingActionButton openColorPicker = findViewById(R.id.openColorPicker);
         openColorPicker.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
                 Intent intent = new Intent(EditImage.this, ColorPicker.class);
-                startActivityForResult(intent, selectedColor);
+                intent.putExtra("redValue", Color.red(selectedColor));
+                intent.putExtra("greenValue", Color.green(selectedColor));
+                intent.putExtra("blueValue", Color.blue(selectedColor));
+                
+                startActivityForResult(intent, 1);
             }
         });
     }
@@ -36,9 +42,12 @@ public class EditImage extends AppCompatActivity
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == REQUEST_CODE  && resultCode  == RESULT_OK)
+        if (resultCode == RESULT_OK)
         {
             selectedColor = data.getIntExtra("color", 0);
         }
+
+        Button demo = findViewById(R.id.buttonDemo);
+        demo.setBackgroundColor(selectedColor);
     }
 }

@@ -5,15 +5,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 
-public class SingleImage extends AppCompatActivity
+public class ExpandedImage extends AppCompatActivity
 {
     private ScaleGestureDetector scaleGestureDetector;
     private float scaleFactor = 1.0f;
@@ -38,13 +36,13 @@ public class SingleImage extends AppCompatActivity
         //--------------------------------------------------------------------------------------------//
         //---CODE WRITTEN FOR ASSIGNMENT 3 BETWEEN THIS START COMMENT AND CORRESPONDING END COMMENT---//
         //--------------------------------------------------------------------------------------------//
-        FloatingActionButton editImage = findViewById(R.id.fab);
+        FloatingActionButton editImage = findViewById(R.id.edit);
         editImage.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(SingleImage.this, EditImage.class);
+                Intent intent = new Intent(ExpandedImage.this, EditImage.class);
                 intent.putExtra("ImageAddress", imageURI);
                 intent.putExtra("Orientation", imageRotation);
                 startActivity(intent);

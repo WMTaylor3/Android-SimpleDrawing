@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SingleImage">
+            android:name=".ExpandedImage">
         </activity>
         <activity
             android:name=".EditImage">

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -35,11 +36,16 @@ public class ColorPicker extends AppCompatActivity
         setContentView(R.layout.color_picker);
         this.setFinishOnTouchOutside(false);
 
-        init();
+        Intent intent = getIntent();
+        int redState = intent.getIntExtra("redValue", 0);
+        int greenState = intent.getIntExtra("greenValue", 0);
+        int blueState = intent.getIntExtra("blueValue", 0);
+
+        init(redState, greenState, blueState);
     }
 
     // -- User Defined Methods -- //
-    private void init()
+    private void init(int redState, int greenState, int blueState)
     {
         //Initialize all variables.
         colorPreview = findViewById(R.id.colorPreview);
@@ -47,9 +53,9 @@ public class ColorPicker extends AppCompatActivity
         redSlider = findViewById(R.id.redSlider);
         greenSlider = findViewById(R.id.greenSlider);
         blueSlider = findViewById(R.id.blueSlider);
-        redSlider.setProgress(0);
-        greenSlider.setProgress(0);
-        blueSlider.setProgress(0);
+        redSlider.setProgress(redState);
+        greenSlider.setProgress(greenState);
+        blueSlider.setProgress(blueState);
         redSlider.setMax(255);
         greenSlider.setMax(255);
         blueSlider.setMax(255);
@@ -106,7 +112,11 @@ public class ColorPicker extends AppCompatActivity
                 String greenInHex = Integer.toString(greenSlider.getProgress(), 16);
                 String blueInHex = Integer.toString(blueSlider.getProgress(), 16);
 
-                String completeColor = "#FF";
+                if (redInHex.length() == 1) { redInHex = "0" + redInHex; }
+                if (greenInHex.length() == 1) { greenInHex = "0" + greenInHex; }
+                if (blueInHex.length() == 1) { blueInHex = "0" + blueInHex; }
+
+                String completeColor = "#";
                 completeColor = completeColor + redInHex;
                 completeColor = completeColor + greenInHex;
                 completeColor = completeColor + blueInHex;
@@ -120,6 +130,8 @@ public class ColorPicker extends AppCompatActivity
                 finish();
             }
         });
+
+        update();
     }
 
     private void update()
