@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity
     //-----------------------------------------------------------------------------------------------------------------------------------------------------------//
     // -- Variables -- //
     //GridView in activity_main.xml
-    GridView gridView;
+    private GridView gridView;
 
     //ImageAdapter feeds images into gridView.
-    ImageAdapter imageAdapter;
+    private ImageAdapter imageAdapter;
 
     //ArrayList containing the URIs for all images on the phone, in date order.
     private ArrayList<ImageDetails> listOfImageDetails = new ArrayList<>();
@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity
 
     //Memory cache to hold cached thumbnails.
     private LruCache<String, Bitmap> mMemoryCache;
-
 
     // -- Override Methods. -- //
     @Override
@@ -139,8 +138,11 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener()
+        //--------------------------------------------------------------------------------------------//
+        //---CODE WRITTEN FOR ASSIGNMENT 3 BETWEEN THIS START COMMENT AND CORRESPONDING END COMMENT---//
+        //--------------------------------------------------------------------------------------------//
+        FloatingActionButton newDrawing = findViewById(R.id.fab);
+        newDrawing.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -149,6 +151,9 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+        //--------------------------------------------------------------------------------------------//
+        //---CODE WRITTEN FOR ASSIGNMENT 3 BETWEEN THIS END COMMENT AND CORRESPONDING START COMMENT---//
+        //--------------------------------------------------------------------------------------------//
     }
 
     private int countImages()

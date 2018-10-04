@@ -21,8 +21,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SingleImage"></activity>
-        <activity android:name=".EditImage"></activity>
+        <activity
+            android:name=".SingleImage">
+        </activity>
+        <activity
+            android:name=".EditImage">
+        </activity>
+        <activity
+            android:name=".ColorPicker"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:excludeFromRecents="true">
+        </activity>
     </application>
 
 </manifest>

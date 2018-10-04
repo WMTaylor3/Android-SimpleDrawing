@@ -13,7 +13,7 @@
             <shape
                 android:shape="line">
                 <stroke
-                    android:color="@color/slider_progress_red"
+                    android:color="@color/slider_progress_green"
                     android:width="@dimen/slider_bar"/>
             </shape>
         </clip>

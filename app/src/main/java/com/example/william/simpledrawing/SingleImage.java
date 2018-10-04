@@ -35,8 +35,11 @@ public class SingleImage extends AppCompatActivity
         imageView = findViewById(R.id.photo);
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener()
+        //--------------------------------------------------------------------------------------------//
+        //---CODE WRITTEN FOR ASSIGNMENT 3 BETWEEN THIS START COMMENT AND CORRESPONDING END COMMENT---//
+        //--------------------------------------------------------------------------------------------//
+        FloatingActionButton editImage = findViewById(R.id.fab);
+        editImage.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -47,6 +50,9 @@ public class SingleImage extends AppCompatActivity
                 startActivity(intent);
             }
         });
+        //--------------------------------------------------------------------------------------------//
+        //---CODE WRITTEN FOR ASSIGNMENT 3 BETWEEN THIS END COMMENT AND CORRESPONDING START COMMENT---//
+        //--------------------------------------------------------------------------------------------//
     }
 
     @Override
