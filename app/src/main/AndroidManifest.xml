@@ -32,6 +32,11 @@
             android:theme="@style/Theme.AppCompat.Dialog"
             android:excludeFromRecents="true">
         </activity>
+        <activity
+            android:name=".ToolPicker"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:excludeFromRecents="true">
+        </activity>
     </application>
 
 </manifest>

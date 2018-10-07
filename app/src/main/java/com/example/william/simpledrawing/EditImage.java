@@ -32,8 +32,20 @@ public class EditImage extends AppCompatActivity
                 intent.putExtra("redValue", Color.red(selectedColor));
                 intent.putExtra("greenValue", Color.green(selectedColor));
                 intent.putExtra("blueValue", Color.blue(selectedColor));
-                
+
                 startActivityForResult(intent, 1);
+            }
+        });
+
+        FloatingActionButton openToolPicker = findViewById(R.id.openToolPicker);
+        openToolPicker.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(EditImage.this, ToolPicker.class);
+
+                startActivity(intent);
             }
         });
     }
@@ -46,8 +58,5 @@ public class EditImage extends AppCompatActivity
         {
             selectedColor = data.getIntExtra("color", 0);
         }
-
-        Button demo = findViewById(R.id.buttonDemo);
-        demo.setBackgroundColor(selectedColor);
     }
 }

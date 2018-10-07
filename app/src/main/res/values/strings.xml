@@ -9,4 +9,13 @@
     <string name="value">0</string>
     <string name="done">Done</string>
     <string name="reset">Reset</string>
+    <string name="tool_preview">ToolPreview</string>
+    <string name="square">Square</string>
+    <string name="circle">Circle</string>
+    <string name="triangle">Triangle</string>
+    <string name="star">Star</string>
+    <string name="filled">Fill:</string>
+    <string name="brush">Brush</string>
+    <string name="eraser">Eraser</string>
+    <string name="size">Size:</string>
 </resources>
