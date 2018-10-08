@@ -14,6 +14,9 @@ public class EditImage extends AppCompatActivity
 {
     // -- Variables and Constants -- //
     private int selectedColor = 0;
+    private int selectedTool = 0;
+    private int toolSize = 1;
+    private boolean shapeFilled = false;
 
     // -- Override Methods -- //
     @Override
@@ -37,6 +40,16 @@ public class EditImage extends AppCompatActivity
             }
         });
 
+        FloatingActionButton saveImage = findViewById(R.id.saveImage);
+        saveImage.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+
+            }
+        });
+
         FloatingActionButton openToolPicker = findViewById(R.id.openToolPicker);
         openToolPicker.setOnClickListener(new View.OnClickListener()
         {
@@ -44,8 +57,11 @@ public class EditImage extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(EditImage.this, ToolPicker.class);
+                intent.putExtra("tool", selectedTool);
+                intent.putExtra("size", toolSize);
+                intent.putExtra("filled", shapeFilled);
 
-                startActivity(intent);
+                startActivityForResult(intent, 2);
             }
         });
     }
@@ -53,10 +69,23 @@ public class EditImage extends AppCompatActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == RESULT_OK)
+        if(requestCode == 1)
         {
-            selectedColor = data.getIntExtra("color", 0);
+            if (resultCode == RESULT_OK)
+            {
+                selectedColor = data.getIntExtra("color", 0);
+            }
+        }
+        else if(requestCode == 2)
+        {
+            if (resultCode == RESULT_OK)
+            {
+                selectedTool = data.getIntExtra("tool", 0);
+                toolSize = data.getIntExtra("size", 0);
+                shapeFilled = data.getBooleanExtra("filled", false);
+            }
         }
     }
+
+
 }
