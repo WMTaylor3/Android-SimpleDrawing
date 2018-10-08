@@ -4,15 +4,13 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
 public class EditImage extends AppCompatActivity
 {
     // -- Variables and Constants -- //
+    private DrawableCanvas canvas;
     private int selectedColor = 0;
     private int selectedTool = 0;
     private int toolSize = 1;
@@ -24,6 +22,11 @@ public class EditImage extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo_edit);
+
+        canvas = findViewById(R.id.drawableView);
+        canvas.drawTriangle(true, 4, 100, 100, 200, 200, Color.RED);
+        canvas.drawTriangle(false, 8, 300, 100, 400, 200, Color.GREEN);
+        canvas.drawTriangle(true, 4, 500, 500, 700, 600, Color.BLUE);
 
         FloatingActionButton openColorPicker = findViewById(R.id.openColorPicker);
         openColorPicker.setOnClickListener(new View.OnClickListener()
@@ -69,23 +72,16 @@ public class EditImage extends AppCompatActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 1)
-        {
-            if (resultCode == RESULT_OK)
-            {
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK) {
                 selectedColor = data.getIntExtra("color", 0);
             }
-        }
-        else if(requestCode == 2)
-        {
-            if (resultCode == RESULT_OK)
-            {
+        } else if (requestCode == 2) {
+            if (resultCode == RESULT_OK) {
                 selectedTool = data.getIntExtra("tool", 0);
                 toolSize = data.getIntExtra("size", 0);
                 shapeFilled = data.getBooleanExtra("filled", false);
             }
         }
     }
-
-
 }
