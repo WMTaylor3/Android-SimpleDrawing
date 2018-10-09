@@ -13,10 +13,10 @@ class DrawableTriangleOutline extends DrawableShape
     DrawableTriangleOutline(int stroke, int xStart, int yStart, int xEnd, int yEnd, int color)
     {
         super(xStart, yStart, xEnd, yEnd, color);
-        trianglePath.moveTo(50,0);
-        trianglePath.lineTo(100, 100);
-        trianglePath.lineTo(0,100);
-        trianglePath.lineTo(50,0);
+        trianglePath.moveTo(xStart+((xEnd-xStart)/2), yStart);
+        trianglePath.lineTo(xEnd, yEnd);
+        trianglePath.lineTo(xStart, yEnd);
+        trianglePath.lineTo(xStart+((xEnd-xStart)/2),yStart);
         trianglePath.close();
 
         this.stroke = stroke;
