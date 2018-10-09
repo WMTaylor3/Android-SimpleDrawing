@@ -2,6 +2,7 @@ package com.example.william.simpledrawing;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -22,11 +23,17 @@ public class EditImage extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo_edit);
-
         canvas = findViewById(R.id.drawableView);
-        canvas.drawTriangle(true, 4, 100, 100, 200, 200, Color.RED);
-        canvas.drawTriangle(false, 8, 300, 100, 400, 200, Color.GREEN);
-        canvas.drawTriangle(true, 4, 500, 500, 700, 600, Color.BLUE);
+
+        Intent intent = getIntent();
+        boolean photoBackground = intent.getBooleanExtra("photoBackground", false);
+        if(photoBackground)
+        {
+            final Uri imageURI = Uri.parse(intent.getStringExtra("Location"));
+            final Integer imageRotation = intent.getIntExtra("Orientation", 0);
+            final Float imageScale = intent.getFloatExtra("Scale", 1.0f);
+            canvas.setBackgroundImage(imageURI, imageRotation, imageScale);
+        }
 
         FloatingActionButton openColorPicker = findViewById(R.id.openColorPicker);
         openColorPicker.setOnClickListener(new View.OnClickListener()

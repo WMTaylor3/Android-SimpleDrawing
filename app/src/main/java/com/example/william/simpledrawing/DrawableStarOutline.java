@@ -32,7 +32,7 @@ class DrawableStarOutline extends DrawableShape
     void Draw(Canvas canvas)
     {
         paint.setColor(color);
-        paint.setStyle(Paint.Style.FILL);
+        paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(stroke);
         canvas.drawPath(starPath, paint);
     }

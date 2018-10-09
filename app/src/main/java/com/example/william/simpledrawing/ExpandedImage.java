@@ -24,13 +24,13 @@ public class ExpandedImage extends AppCompatActivity
         setContentView(R.layout.photo_expanded);
 
         Intent intent = getIntent();
-        final Uri imageURI = Uri.parse(intent.getStringExtra("Location"));
+        final String stringLocation = intent.getStringExtra("Location");
+        final Uri imageURI = Uri.parse(stringLocation);
         final Integer imageRotation = intent.getIntExtra("Orientation", 0);
         imageView = findViewById(R.id.photo);
         imageView.setImageURI(imageURI);
         imageView.setRotation(imageRotation);
 
-        imageView = findViewById(R.id.photo);
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
         //--------------------------------------------------------------------------------------------//
@@ -43,8 +43,10 @@ public class ExpandedImage extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(ExpandedImage.this, EditImage.class);
-                intent.putExtra("ImageAddress", imageURI);
+                intent.putExtra("photoBackground", true);
+                intent.putExtra("Location", stringLocation);
                 intent.putExtra("Orientation", imageRotation);
+                intent.putExtra("Scale", scaleFactor);
                 startActivity(intent);
             }
         });
