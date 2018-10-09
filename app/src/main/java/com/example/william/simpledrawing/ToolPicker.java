@@ -150,10 +150,10 @@ public class ToolPicker  extends AppCompatActivity
                     toolPreview.setImageResource(R.drawable.usr_square_black);
                     break;
                 case 1: //
-                    toolPreview.setImageResource((R.drawable.usr_circle_black));
+                    toolPreview.setImageResource(R.drawable.usr_circle_black);
                     break;
                 case 2: //Triangle
-                    toolPreview.setImageResource((R.drawable.usr_triangle_black));
+                    toolPreview.setImageResource(R.drawable.usr_triangle_black);
                     break;
                 case 3: //Star
                     toolPreview.setImageResource(R.drawable.ic_star_black);
@@ -162,7 +162,7 @@ public class ToolPicker  extends AppCompatActivity
                     toolPreview.setImageResource(R.drawable.ic_brush_black);
                     break;
                 case 5: //Eraser
-                    toolPreview.setImageResource((R.drawable.usr_eraser));
+                    toolPreview.setImageResource(R.drawable.usr_eraser);
                     break;
             }
         }
@@ -174,10 +174,10 @@ public class ToolPicker  extends AppCompatActivity
                     toolPreview.setImageResource(R.drawable.usr_square_border_black);
                     break;
                 case 1: //Circle
-                    toolPreview.setImageResource((R.drawable.usr_circle_border_black));
+                    toolPreview.setImageResource(R.drawable.usr_circle_border_black);
                     break;
                 case 2: //Triangle
-                    toolPreview.setImageResource((R.drawable.usr_triangle_border_black));
+                    toolPreview.setImageResource(R.drawable.usr_triangle_border_black);
                     break;
                 case 3: //Star
                     toolPreview.setImageResource(R.drawable.ic_star_border_black);
@@ -186,7 +186,7 @@ public class ToolPicker  extends AppCompatActivity
                     toolPreview.setImageResource(R.drawable.ic_brush_black);
                     break;
                 case 5: //Eraser
-                    toolPreview.setImageResource((R.drawable.usr_eraser));
+                    toolPreview.setImageResource(R.drawable.usr_eraser);
                     break;
             }
         }
