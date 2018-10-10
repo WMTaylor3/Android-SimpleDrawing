@@ -56,7 +56,7 @@ public class EditImage extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-
+                canvas.saveBitmap();
             }
         });
 

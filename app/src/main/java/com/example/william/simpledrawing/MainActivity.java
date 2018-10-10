@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
     private ArrayList<ImageDetails> listOfImageDetails = new ArrayList<>();
 
     //Response for request for storage permission.
-    private static final int REQUEST_TO_READ_EXTERNAL_STORAGE = 1;
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
 
     //Memory cache to hold cached thumbnails.
     private LruCache<String, Bitmap> mMemoryCache;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity
         {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
             {
-                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_TO_READ_EXTERNAL_STORAGE);
+                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_EXTERNAL_STORAGE);
                 return;
             }
         }
@@ -70,9 +70,9 @@ public class MainActivity extends AppCompatActivity
     {
         switch (requestCode)
         {
-            case REQUEST_TO_READ_EXTERNAL_STORAGE:
+            case REQUEST_EXTERNAL_STORAGE:
             {
-                if (grantResults.length < 1 || grantResults[0] != PackageManager.PERMISSION_GRANTED)
+                if (grantResults.length < 1 || grantResults[0] != PackageManager.PERMISSION_GRANTED || grantResults[1] != PackageManager.PERMISSION_GRANTED)
                 {
                     //Permission Denied. Close app.
                     finish();

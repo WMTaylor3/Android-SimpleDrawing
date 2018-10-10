@@ -75,6 +75,4 @@ public class ExpandedImage extends AppCompatActivity
         }
     }
 //CODE FROM ASSIGNMENT 2 BETWEEN THIS END COMMENT AND CORRESPONDING START COMMENT
-
-
 }

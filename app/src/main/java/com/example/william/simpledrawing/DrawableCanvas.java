@@ -1,29 +1,23 @@
 package com.example.william.simpledrawing;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.shapes.Shape;
 import android.net.Uri;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.net.URI;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class DrawableCanvas extends View
 {
@@ -115,5 +109,42 @@ public class DrawableCanvas extends View
             newShape = new DrawableStarOutline(stroke, xStart, yStart, xEnd, yEnd, color);
         }
         listOfShapes.add(newShape);
+    }
+
+    public void saveBitmap()
+    {
+        //Define a bitmap with the same size as the view
+        Bitmap imageAsBitmap = Bitmap.createBitmap(this.getWidth(), this.getHeight(),Bitmap.Config.ARGB_8888);
+        //Bind a canvas to it
+        Canvas canvas = new Canvas(imageAsBitmap);
+        //Get the view's background
+        Drawable bgDrawable =this.getBackground();
+        if (bgDrawable!=null)
+            //has background drawable, then draw it on the canvas
+            bgDrawable.draw(canvas);
+        else
+            //does not have background drawable, then draw white background on the canvas
+            canvas.drawColor(Color.WHITE);
+        // draw the view on the canvas
+        this.draw(canvas);
+        //return the bitmap
+
+       try
+       {
+           SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
+           String dateTime = sdf.format(new Date());
+
+           File file = new File(Environment.getExternalStorageDirectory().toString(), "SimpleDraw"+dateTime+".png");
+           OutputStream fileOut = new FileOutputStream(file);
+
+           imageAsBitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOut);
+           fileOut.close();
+
+           MediaStore.Images.Media.insertImage(getContext().getContentResolver(), file.getAbsolutePath(), file.getName(), file.getName());
+       }
+       catch(Exception e)
+       {
+           e.printStackTrace();
+       }
     }
 }
