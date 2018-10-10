@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
 public class EditImage extends AppCompatActivity
@@ -16,6 +18,7 @@ public class EditImage extends AppCompatActivity
     private int selectedTool = 0;
     private int toolSize = 1;
     private boolean shapeFilled = false;
+    DrawableLine currentLine = null;
 
     // -- Override Methods -- //
     @Override
@@ -25,6 +28,9 @@ public class EditImage extends AppCompatActivity
         setContentView(R.layout.photo_edit);
         canvas = findViewById(R.id.drawableView);
 
+        canvas.drawStar(true, 200, 200, 800, 800, Color.RED, 2);
+        canvas.drawStar(false, 900, 900, 950, 950, Color.BLUE, 5);
+
         Intent intent = getIntent();
         boolean photoBackground = intent.getBooleanExtra("photoBackground", false);
         if(photoBackground)
@@ -32,7 +38,7 @@ public class EditImage extends AppCompatActivity
             final Uri imageURI = Uri.parse(intent.getStringExtra("Location"));
             final Integer imageRotation = intent.getIntExtra("Orientation", 0);
             final Float imageScale = intent.getFloatExtra("Scale", 1.0f);
-            canvas.setBackgroundImage(imageURI, imageRotation, imageScale);
+            //canvas.setBackgroundImage(imageURI, imageRotation, imageScale);
         }
 
         FloatingActionButton openColorPicker = findViewById(R.id.openColorPicker);
@@ -77,7 +83,8 @@ public class EditImage extends AppCompatActivity
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
@@ -90,5 +97,45 @@ public class EditImage extends AppCompatActivity
                 shapeFilled = data.getBooleanExtra("filled", false);
             }
         }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        Log.e("WILLIAM", "Touch Detected");
+        int x = (int)event.getX();
+        int y = (int)event.getY();
+
+        switch(event.getAction())
+        {
+            case MotionEvent.ACTION_DOWN :
+                touchBegin(x, y);
+                break;
+            case MotionEvent.ACTION_MOVE :
+                touchMove(x, y);
+                break;
+            case MotionEvent.ACTION_UP :
+                touchEnd();
+                break;
+        }
+
+        return true;
+    }
+
+    // -- User Defined Methods -- //
+    private void touchBegin(int x, int y)
+    {
+        currentLine = canvas.newLine(selectedColor, toolSize);
+        currentLine.MoveTo(x, y);
+    }
+
+    private void touchMove(int x, int y)
+    {
+        currentLine.LineTo(x, y);
+    }
+
+    private void touchEnd()
+    {
+        currentLine = null;
     }
 }

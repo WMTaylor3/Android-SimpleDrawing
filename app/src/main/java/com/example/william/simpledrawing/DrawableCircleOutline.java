@@ -8,12 +8,10 @@ class DrawableCircleOutline extends DrawableShape
 {
     private Paint paint = new Paint();
     private RectF coordinates = new RectF(xStart, yStart, xEnd, yEnd);
-    int stroke;
 
-    DrawableCircleOutline(int stroke, int xStart, int yStart, int xEnd, int yEnd, int color)
+    DrawableCircleOutline(int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)
     {
-        super(xStart, yStart, xEnd, yEnd, color);
-        this.stroke = stroke;
+        super(xStart, yStart, xEnd, yEnd, color, stroke);
     }
 
     void Draw(Canvas canvas)

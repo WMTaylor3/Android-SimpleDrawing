@@ -8,12 +8,10 @@ class DrawableRectangleOutline extends DrawableShape
 {
     private Paint paint = new Paint();
     private Rect rectangle = new Rect(xStart, yStart, xEnd, yEnd);
-    private int stroke;
 
-    DrawableRectangleOutline(int stroke, int xStart, int yStart, int xEnd, int yEnd, int color)
+    DrawableRectangleOutline(int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)
     {
-        super(xStart, yStart, xEnd, yEnd, color);
-        this.stroke = stroke;
+        super(xStart, yStart, xEnd, yEnd, color, stroke);
     }
 
     void Draw(Canvas canvas)

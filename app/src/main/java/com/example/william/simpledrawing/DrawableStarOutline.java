@@ -8,25 +8,26 @@ class DrawableStarOutline extends DrawableShape
 {
     private Paint paint = new Paint();
     private Path starPath = new Path();
-    private int stroke;
 
-    DrawableStarOutline(int stroke, int xStart, int yStart, int xEnd, int yEnd, int color)
+    DrawableStarOutline(int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)
     {
-        super(xStart, yStart, xEnd, yEnd, color);
-        starPath.moveTo(100.000f, 150.000f);
-        starPath.lineTo(158.779f, 180.902f);
-        starPath.lineTo(147.553f, 115.451f);
-        starPath.lineTo(195.106f, 69.098f);
-        starPath.lineTo(129.389f, 59.549f);
-        starPath.lineTo(100.000f, 0.000f);
-        starPath.lineTo(70.611f, 59.549f);
-        starPath.lineTo(4.894f, 69.098f);
-        starPath.lineTo(52.447f, 115.451f);
-        starPath.lineTo(41.221f, 180.902f);
-        starPath.lineTo(100.000f, 150.000f);
-        starPath.close();
+        super(xStart, yStart, xEnd, yEnd, color, stroke);
 
-        this.stroke = stroke;
+        float height = xEnd-xStart;
+        float width = yEnd-yStart;
+
+        starPath.moveTo(width * 0.500f + xStart, height * 0.000f + yStart); //Point 1
+        starPath.lineTo(width * 0.620f + xStart, height * 0.384f + yStart); //Vert 1
+        starPath.lineTo(width * 1.000f + xStart, height * 0.384f + yStart); //Point 2
+        starPath.lineTo(width * 0.693f + xStart, height * 0.618f + yStart); //Vert 2
+        starPath.lineTo(width * 0.809f + xStart, height * 1.000f + yStart); //Point 3
+        starPath.lineTo(width * 0.500f + xStart, height * 0.765f + yStart); //Vert 3
+        starPath.lineTo(width * 0.196f + xStart, height * 1.000f + yStart); //Point 4
+        starPath.lineTo(width * 0.312f + xStart, height * 0.618f + yStart); //Vert 4
+        starPath.lineTo(width * 0.000f + xStart, height * 0.384f + yStart); //Point 5
+        starPath.lineTo(width * 0.384f + xStart, height * 0.384f + yStart); //Vert 5
+        starPath.lineTo(width * 0.500f + xStart, height * 0.000f + yStart); //Point 1
+        starPath.close();
     }
 
     void Draw(Canvas canvas)

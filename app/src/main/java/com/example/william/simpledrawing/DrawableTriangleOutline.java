@@ -8,18 +8,15 @@ class DrawableTriangleOutline extends DrawableShape
 {
     private Paint paint = new Paint();
     private Path trianglePath = new Path();
-    private int stroke;
 
-    DrawableTriangleOutline(int stroke, int xStart, int yStart, int xEnd, int yEnd, int color)
+    DrawableTriangleOutline(int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)
     {
-        super(xStart, yStart, xEnd, yEnd, color);
+        super(xStart, yStart, xEnd, yEnd, color, stroke);
         trianglePath.moveTo(xStart+((xEnd-xStart)/2), yStart);
         trianglePath.lineTo(xEnd, yEnd);
         trianglePath.lineTo(xStart, yEnd);
         trianglePath.lineTo(xStart+((xEnd-xStart)/2),yStart);
         trianglePath.close();
-
-        this.stroke = stroke;
     }
 
     void Draw(Canvas canvas)
