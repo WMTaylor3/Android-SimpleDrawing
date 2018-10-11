@@ -3,6 +3,7 @@ package com.example.william.simpledrawing;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -33,7 +34,16 @@ public class EditImage extends AppCompatActivity
         Intent intent = getIntent();
         if(intent.getBooleanExtra("photoBackground", false))
         {
-            canvas.setBackgroundImage(//TODO: SOMETHING HERE);
+            Bitmap bitmap = PersistentBitmap.getBitmap();
+            int rotation = PersistentBitmap.getRotation();
+
+            Matrix matrix = new Matrix();
+
+            matrix.postRotate(rotation);
+
+            Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+
+            canvas.setBackgroundImage(rotatedBitmap);
         }
 
         FloatingActionButton openColorPicker = findViewById(R.id.openColorPicker);

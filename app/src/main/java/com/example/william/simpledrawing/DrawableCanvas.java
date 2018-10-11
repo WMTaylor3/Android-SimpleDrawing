@@ -17,6 +17,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -63,11 +64,11 @@ public class DrawableCanvas extends View
         super(context, attrs, defStyleAttr);
     }
 
-    public void setBackgroundImage(//Something here)
+    public void setBackgroundImage(Bitmap bitmap)
     {
         try
         {
-            BitmapDrawable bitmapDrawable = new BitmapDrawable(getContext().getResources(), //TODO Fix this.);
+            BitmapDrawable bitmapDrawable = new BitmapDrawable(getContext().getResources(), bitmap);
             this.setBackground(bitmapDrawable);
         }
         catch(Exception e)

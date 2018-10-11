@@ -13,7 +13,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.LruCache;
 import android.view.View;
@@ -22,7 +21,6 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -44,8 +42,8 @@ public class MainActivity extends AppCompatActivity
     //Response for request for storage permission.
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
 
-    //Memory cache to hold cached thumbnails.
-    private LruCache<String, Bitmap> mMemoryCache;
+    //Memory cache for image thumbnail storage.
+    private LruCache<String, Bitmap> memoryCache;
 
     // -- Override Methods. -- //
     @Override
@@ -115,7 +113,7 @@ public class MainActivity extends AppCompatActivity
 
         final int cacheSize = maxMemory / 8;
 
-        mMemoryCache = new LruCache<String, Bitmap>(cacheSize)
+        memoryCache = new LruCache<String, Bitmap>(cacheSize)
         {
             @Override
             protected int sizeOf(String key, Bitmap bitmap)
@@ -134,6 +132,7 @@ public class MainActivity extends AppCompatActivity
                 Integer imageRotation = listOfImageDetails.get(position).orientation;
                 intent.putExtra("Location", imageLocation);
                 intent.putExtra("Orientation", imageRotation);
+
                 startActivity(intent);
             }
         });
@@ -155,6 +154,21 @@ public class MainActivity extends AppCompatActivity
         //--------------------------------------------------------------------------------------------//
         //---CODE WRITTEN FOR ASSIGNMENT 3 BETWEEN THIS END COMMENT AND CORRESPONDING START COMMENT---//
         //--------------------------------------------------------------------------------------------//
+    }
+
+    //Adds a bitmap into the cache, first checking if it already exists.
+    private void AddBitmapToMemoryCache(String key, Bitmap bitmap)
+    {
+        if (GetBitmapFromMemCache(key) == null)
+        {
+            memoryCache.put(key, bitmap);
+        }
+    }
+
+    //Pulls a bitmap from the memory cache.
+    private Bitmap GetBitmapFromMemCache(String key)
+    {
+        return memoryCache.get(key);
     }
 
     private int countImages()
@@ -183,20 +197,6 @@ public class MainActivity extends AppCompatActivity
         cursor.close();
         return detailsToReturn;
     }
-
-    public void addBitmapToMemoryCache(String key, Bitmap bitmap)
-    {
-        if (getBitmapFromMemCache(key) == null)
-        {
-            mMemoryCache.put(key, bitmap);
-        }
-    }
-
-    public Bitmap getBitmapFromMemCache(String key)
-    {
-        return mMemoryCache.get(key);
-    }
-
 
     // -- Classes -- //
     //Object containing image details.
@@ -285,14 +285,14 @@ public class MainActivity extends AppCompatActivity
 
                     try
                     {
-                        Bitmap cachedThumbnail = getBitmapFromMemCache(photo.path);
+                        Bitmap cachedThumbnail = GetBitmapFromMemCache(photo.path);
                         if (cachedThumbnail != null)
                         {
                             return cachedThumbnail;
                         } else
                         {
                             Bitmap bmp = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(photo.path, pixel), Resources.getSystem().getDisplayMetrics().widthPixels / 4, Resources.getSystem().getDisplayMetrics().widthPixels / 4);
-                            addBitmapToMemoryCache(photo.path, bmp);
+                            AddBitmapToMemoryCache(photo.path, bmp);
                             return bmp;
                         }
                     } catch (Exception exc)

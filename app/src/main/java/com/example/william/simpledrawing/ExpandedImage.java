@@ -43,10 +43,14 @@ public class ExpandedImage extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                imageView.buildDrawingCache();
                 Intent intent = new Intent(ExpandedImage.this, EditImage.class);
                 intent.putExtra("photoBackground", true);
-                //TODO: Add the bitmap in some how.
+
+                imageView.buildDrawingCache();
+                Bitmap bitmap = imageView.getDrawingCache();
+                PersistentBitmap.setBitmap(bitmap);
+                PersistentBitmap.setRotation(imageRotation);
+
                 startActivity(intent);
             }
         });

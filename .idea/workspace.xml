@@ -18,8 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3f51f78-ec40-4224-8161-1c53ff3f6d19" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_delete_white.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_undo_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/PersistentBitmap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -28,12 +27,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/photo_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/photo_edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -94,11 +93,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DrawableCanvas.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DrawableCanvas.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+            <state relative-caret-position="630">
+              <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
               <folding>
                 <element signature="e#1300#1301#0" expanded="true" />
                 <element signature="e#1330#1331#0" expanded="true" />
@@ -120,46 +119,84 @@
       <file leaf-file-name="EditImage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="62" column="55" lean-forward="true" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+            <state relative-caret-position="296">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2688#2864#0" expanded="true" />
-                <element signature="e#2863#2864#0" expanded="true" />
-                <element signature="e#2970#3146#0" expanded="true" />
-                <element signature="e#3145#3146#0" expanded="true" />
-                <element signature="e#3275#3451#0" expanded="true" />
-                <element signature="e#3450#3451#0" expanded="true" />
+                <element signature="e#1446#1935#0" expanded="true" />
+                <element signature="e#1934#1935#0" expanded="true" />
+                <element signature="e#2062#2493#0" expanded="true" />
+                <element signature="e#2492#2493#0" expanded="true" />
+                <element signature="e#2602#2776#0" expanded="true" />
+                <element signature="e#2775#2776#0" expanded="true" />
+                <element signature="e#2882#3055#0" expanded="true" />
+                <element signature="e#3054#3055#0" expanded="true" />
+                <element signature="e#3167#3343#0" expanded="true" />
+                <element signature="e#3342#3343#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpandedImage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExpandedImage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+            <state relative-caret-position="765">
+              <caret line="51" column="60" selection-start-line="51" selection-start-column="60" selection-end-line="51" selection-end-column="60" />
               <folding>
-                <element signature="e#1680#2176#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1712#2276#0" expanded="true" />
+                <element signature="e#2275#2276#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="photo_edit.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_edit.xml">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="46" />
+            <state relative-caret-position="102">
+              <caret line="159" column="46" selection-start-line="159" selection-start-column="46" selection-end-line="159" selection-end-column="46" />
               <folding>
-                <element signature="e#1971#1990#0" expanded="true" />
-                <element signature="e#2596#2615#0" expanded="true" />
-                <element signature="e#3221#3240#0" expanded="true" />
+                <element signature="method#onCreate#0;class#MainActivity#0" />
+                <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" />
+                <element signature="e#4302#4303#0" expanded="true" />
+                <element signature="e#4369#4370#0" expanded="true" />
+                <element signature="e#4415#5026#0" expanded="true" />
+                <element signature="e#5025#5026#0" expanded="true" />
               </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
+        </entry>
+      </file>
+      <file leaf-file-name="PersistentBitmap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/PersistentBitmap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="27" column="28" selection-start-line="27" selection-end-line="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#533#534#0" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
             <state />
           </provider>
         </entry>
@@ -176,6 +213,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>setBackgroundImage</find>
+      <find>cacheS</find>
+      <find>cache</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2451,11 +2490,15 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/usr_line.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableStraightLine.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableLine.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/photo_edit.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MemoryCache.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/PersistantBitmap.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/PersistentBitmap.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java" />
       </list>
     </option>
   </component>
@@ -2551,6 +2594,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="drawable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Android-SimpleDrawing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Android-SimpleDrawing" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Android-SimpleDrawing" type="b2602c69:ProjectViewProjectNode" />
@@ -2705,32 +2757,32 @@
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="12" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="7" />
       <window_info id="Build Variants" order="3" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="right" id="Preview" weight="0.3297568" />
+      <window_info anchor="right" id="Preview" order="0" weight="0.3297568" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="7" visible="true" weight="0.3974359" />
+      <window_info anchor="bottom" id="Logcat" order="7" weight="0.3974359" />
       <window_info id="Captures" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20600858" />
-      <window_info anchor="bottom" id="Build" order="11" weight="0.18461539" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20600858" />
+      <window_info anchor="bottom" id="Build" order="11" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Device File Explorer" order="4" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
@@ -2740,7 +2792,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -2771,12 +2823,16 @@
           <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2688#2864#0" expanded="true" />
-            <element signature="e#2863#2864#0" expanded="true" />
-            <element signature="e#2970#3146#0" expanded="true" />
-            <element signature="e#3145#3146#0" expanded="true" />
-            <element signature="e#3275#3451#0" expanded="true" />
-            <element signature="e#3450#3451#0" expanded="true" />
+            <element signature="e#1446#1935#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#2062#2493#0" expanded="true" />
+            <element signature="e#2492#2493#0" expanded="true" />
+            <element signature="e#2602#2776#0" expanded="true" />
+            <element signature="e#2775#2776#0" expanded="true" />
+            <element signature="e#2882#3055#0" expanded="true" />
+            <element signature="e#3054#3055#0" expanded="true" />
+            <element signature="e#3167#3343#0" expanded="true" />
+            <element signature="e#3342#3343#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2999,14 +3055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_expanded.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableLine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
@@ -3018,16 +3066,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_edit.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_expanded.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="46" />
-          <folding>
-            <element signature="e#1971#1990#0" expanded="true" />
-            <element signature="e#2596#2615#0" expanded="true" />
-            <element signature="e#3221#3240#0" expanded="true" />
-          </folding>
-        </state>
+        <state />
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
@@ -3035,58 +3076,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="e#671#689#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="91">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
       <provider editor-type-id="android-manifest">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/PersistentBitmap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="268" column="45" selection-start-line="268" selection-start-column="45" selection-end-line="268" selection-end-column="45" />
+        <state relative-caret-position="308">
+          <caret line="27" column="28" selection-start-line="27" selection-end-line="28" />
           <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="159" column="46" selection-start-line="159" selection-start-column="46" selection-end-line="159" selection-end-column="46" />
           <folding>
-            <element signature="e#1680#2176#0" expanded="true" />
+            <element signature="method#onCreate#0;class#MainActivity#0" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" />
+            <element signature="e#4302#4303#0" expanded="true" />
+            <element signature="e#4369#4370#0" expanded="true" />
+            <element signature="e#4415#5026#0" expanded="true" />
+            <element signature="e#5025#5026#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="62" column="55" lean-forward="true" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+        <state relative-caret-position="296">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2688#2864#0" expanded="true" />
-            <element signature="e#2863#2864#0" expanded="true" />
-            <element signature="e#2970#3146#0" expanded="true" />
-            <element signature="e#3145#3146#0" expanded="true" />
-            <element signature="e#3275#3451#0" expanded="true" />
-            <element signature="e#3450#3451#0" expanded="true" />
+            <element signature="e#1446#1935#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#2062#2493#0" expanded="true" />
+            <element signature="e#2492#2493#0" expanded="true" />
+            <element signature="e#2602#2776#0" expanded="true" />
+            <element signature="e#2775#2776#0" expanded="true" />
+            <element signature="e#2882#3055#0" expanded="true" />
+            <element signature="e#3054#3055#0" expanded="true" />
+            <element signature="e#3167#3343#0" expanded="true" />
+            <element signature="e#3342#3343#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/photo_edit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="43" lean-forward="true" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        <state relative-caret-position="630">
+          <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
           <folding>
             <element signature="e#1300#1301#0" expanded="true" />
             <element signature="e#1330#1331#0" expanded="true" />
@@ -3100,6 +3164,18 @@
             <element signature="method#UndoLast#0;class#DrawableCanvas#0" />
             <element signature="method#UndoAll#0;class#DrawableCanvas#0" />
             <element signature="method#saveBitmap#0;class#DrawableCanvas#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="60" selection-start-line="51" selection-start-column="60" selection-end-line="51" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1712#2276#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
           </folding>
         </state>
       </provider>
