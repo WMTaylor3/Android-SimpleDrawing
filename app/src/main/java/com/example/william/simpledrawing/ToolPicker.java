@@ -18,7 +18,7 @@ public class ToolPicker  extends AppCompatActivity
     Button triangleButton;
     Button starButton;
     Button brushButton;
-    Button eraserButton;
+    Button lineButton;
     Button doneButton;
     CheckBox filledCheckBox;
     SeekBar brushSize;
@@ -39,7 +39,6 @@ public class ToolPicker  extends AppCompatActivity
         currentTool = intent.getIntExtra("tool", 0);
         currentSize = intent.getIntExtra("size", 0);
         checkFilled = intent.getBooleanExtra("filled", false);
-
         init();
     }
 
@@ -53,10 +52,12 @@ public class ToolPicker  extends AppCompatActivity
         triangleButton = findViewById(R.id.buttonTriangle);
         starButton = findViewById(R.id.buttonStar);
         brushButton = findViewById(R.id.buttonBrush);
-        eraserButton = findViewById(R.id.buttonEraser);
+        lineButton = findViewById(R.id.buttonLine);
         doneButton = findViewById(R.id.buttonDone);
         filledCheckBox = findViewById(R.id.checkBoxFilled);
         brushSize = findViewById(R.id.seekBarSize);
+
+
 
         squareButton.setOnClickListener(new View.OnClickListener()
         {
@@ -103,7 +104,7 @@ public class ToolPicker  extends AppCompatActivity
                 update();
             }
         });
-        eraserButton.setOnClickListener(new View.OnClickListener()
+        lineButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -121,7 +122,26 @@ public class ToolPicker  extends AppCompatActivity
                 update();
             }
         });
+        brushSize.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
+        {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser)
+            {
+                //Empty
+            }
 
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar)
+            {
+                //Empty
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar)
+            {
+                currentSize = brushSize.getProgress();
+            }
+        });
         doneButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -136,6 +156,11 @@ public class ToolPicker  extends AppCompatActivity
                 finish();
             }
         });
+
+        filledCheckBox.setChecked(checkFilled);
+        brushSize.setProgress(currentSize);
+
+        update();
     }
 
     private void update()
@@ -161,8 +186,8 @@ public class ToolPicker  extends AppCompatActivity
                 case 4: //Brush
                     toolPreview.setImageResource(R.drawable.ic_brush_black);
                     break;
-                case 5: //Eraser
-                    toolPreview.setImageResource(R.drawable.usr_eraser);
+                case 5: //Line
+                    toolPreview.setImageResource(R.drawable.usr_line);
                     break;
             }
         }
@@ -185,8 +210,8 @@ public class ToolPicker  extends AppCompatActivity
                 case 4: //Brush
                     toolPreview.setImageResource(R.drawable.ic_brush_black);
                     break;
-                case 5: //Eraser
-                    toolPreview.setImageResource(R.drawable.usr_eraser);
+                case 5: //Line
+                    toolPreview.setImageResource(R.drawable.usr_line);
                     break;
             }
         }

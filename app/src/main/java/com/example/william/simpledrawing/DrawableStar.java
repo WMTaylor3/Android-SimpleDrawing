@@ -13,8 +13,8 @@ class DrawableStar extends DrawableShape
     {
         super(xStart, yStart, xEnd, yEnd, color);
 
-        float height = xEnd-xStart;
-        float width = yEnd-yStart;
+        float width = xEnd-xStart;
+        float height = yEnd-yStart;
 
         starPath.moveTo(width * 0.500f + xStart, height * 0.000f + yStart); //Point 1
         starPath.lineTo(width * 0.620f + xStart, height * 0.384f + yStart); //Vert 1

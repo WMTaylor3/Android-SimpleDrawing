@@ -36,6 +36,11 @@ public class DrawableLine extends DrawableShape
         }
     }
 
+    void DeletePath()
+    {
+        this.path = new Path();
+    }
+
     public void Draw(Canvas canvas)
     {
         paint.setColor(color);

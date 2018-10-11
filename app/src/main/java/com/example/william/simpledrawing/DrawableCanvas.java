@@ -11,6 +11,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ public class DrawableCanvas extends View
 {
     // -- Variables -- //
     private ArrayList<DrawableShape> listOfShapes = new ArrayList<>();
+    private DrawableShape newShape;
 
     // -- Override Methods -- //
     @Override
@@ -34,6 +36,10 @@ public class DrawableCanvas extends View
         for(DrawableShape s : listOfShapes)
         {
             s.Draw(canvas);
+        }
+        if(newShape != null)
+        {
+            newShape.Draw(canvas);
         }
     }
 
@@ -53,7 +59,6 @@ public class DrawableCanvas extends View
         super(context, attrs, defStyleAttr);
     }
 
-    /*
     public void setBackgroundImage(Uri imageURI, Integer imageRotation, float imageScale)
     {
         try
@@ -67,11 +72,9 @@ public class DrawableCanvas extends View
             e.printStackTrace();
         }
     }
-    */
 
     public void drawRectangle(boolean filled, int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)
     {
-        DrawableShape newShape;
         if(filled)
         {
             newShape = new DrawableRectangle(xStart, yStart, xEnd, yEnd, color);
@@ -80,12 +83,10 @@ public class DrawableCanvas extends View
         {
             newShape = new DrawableRectangleOutline(xStart, yStart, xEnd, yEnd, color, stroke);
         }
-        listOfShapes.add(newShape);
     }
 
     public void drawCircle(boolean filled, int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)
     {
-        DrawableShape newShape;
         if(filled)
         {
             newShape = new DrawableCircle(xStart, yStart, xEnd, yEnd, color);
@@ -94,12 +95,10 @@ public class DrawableCanvas extends View
         {
             newShape = new DrawableCircleOutline(xStart, yStart, xEnd, yEnd, color, stroke);
         }
-        listOfShapes.add(newShape);
     }
 
     public void drawTriangle(boolean filled, int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)
     {
-        DrawableShape newShape;
         if(filled)
         {
             newShape = new DrawableTriangle(xStart, yStart, xEnd, yEnd, color);
@@ -108,12 +107,10 @@ public class DrawableCanvas extends View
         {
             newShape = new DrawableTriangleOutline(xStart, yStart, xEnd, yEnd, color, stroke);
         }
-        listOfShapes.add(newShape);
     }
 
     public void drawStar(boolean filled, int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)
     {
-        DrawableShape newShape;
         if(filled)
         {
             newShape = new DrawableStar(xStart, yStart, xEnd, yEnd, color);
@@ -122,14 +119,19 @@ public class DrawableCanvas extends View
         {
             newShape = new DrawableStarOutline(xStart, yStart, xEnd, yEnd, color, stroke);
         }
-        listOfShapes.add(newShape);
     }
 
-    public DrawableLine newLine(int xStart, int yStart)
+    public DrawableLine newLine(int color, int stroke)
     {
-        DrawableShape newLine = new DrawableLine(xStart, yStart);
+        DrawableShape newLine = new DrawableLine(color, stroke);
         listOfShapes.add(newLine);
         return (DrawableLine)newLine;
+    }
+
+    public void StoreShape()
+    {
+        listOfShapes.add(newShape);
+        newShape = null;
     }
 
     public void saveBitmap()

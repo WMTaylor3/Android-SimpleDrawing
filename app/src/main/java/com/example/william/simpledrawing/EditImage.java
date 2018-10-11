@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -14,11 +13,13 @@ public class EditImage extends AppCompatActivity
 {
     // -- Variables and Constants -- //
     private DrawableCanvas canvas;
-    private int selectedColor = 0;
-    private int selectedTool = 0;
-    private int toolSize = 1;
+    private int selectedColor = Color.BLACK;
+    private int selectedTool = 4;
+    private int toolSize = 10;
     private boolean shapeFilled = false;
     DrawableLine currentLine = null;
+    int xStart = 0;
+    int yStart = 0;
 
     // -- Override Methods -- //
     @Override
@@ -28,9 +29,6 @@ public class EditImage extends AppCompatActivity
         setContentView(R.layout.photo_edit);
         canvas = findViewById(R.id.drawableView);
 
-        canvas.drawStar(true, 200, 200, 800, 800, Color.RED, 2);
-        canvas.drawStar(false, 900, 900, 950, 950, Color.BLUE, 5);
-
         Intent intent = getIntent();
         boolean photoBackground = intent.getBooleanExtra("photoBackground", false);
         if(photoBackground)
@@ -38,7 +36,7 @@ public class EditImage extends AppCompatActivity
             final Uri imageURI = Uri.parse(intent.getStringExtra("Location"));
             final Integer imageRotation = intent.getIntExtra("Orientation", 0);
             final Float imageScale = intent.getFloatExtra("Scale", 1.0f);
-            //canvas.setBackgroundImage(imageURI, imageRotation, imageScale);
+            canvas.setBackgroundImage(imageURI, imageRotation, imageScale);
         }
 
         FloatingActionButton openColorPicker = findViewById(R.id.openColorPicker);
@@ -87,10 +85,13 @@ public class EditImage extends AppCompatActivity
     {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
-            if (resultCode == RESULT_OK) {
+            if (resultCode == RESULT_OK)
+            {
                 selectedColor = data.getIntExtra("color", 0);
             }
-        } else if (requestCode == 2) {
+        }
+        else if (requestCode == 2)
+        {
             if (resultCode == RESULT_OK) {
                 selectedTool = data.getIntExtra("tool", 0);
                 toolSize = data.getIntExtra("size", 0);
@@ -102,7 +103,6 @@ public class EditImage extends AppCompatActivity
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        Log.e("WILLIAM", "Touch Detected");
         int x = (int)event.getX();
         int y = (int)event.getY();
 
@@ -125,17 +125,56 @@ public class EditImage extends AppCompatActivity
     // -- User Defined Methods -- //
     private void touchBegin(int x, int y)
     {
-        currentLine = canvas.newLine(selectedColor, toolSize);
-        currentLine.MoveTo(x, y);
+        xStart = x;
+        yStart = y;
+
+        if((selectedTool >= 4) && (selectedTool <= 5))
+        {
+            currentLine = canvas.newLine(selectedColor, toolSize);
+            currentLine.MoveTo(x, y);
+        }
+
+        canvas.invalidate();
     }
 
     private void touchMove(int x, int y)
     {
-        currentLine.LineTo(x, y);
+        switch(selectedTool)
+        {
+            case 0: //Square
+                canvas.drawRectangle(shapeFilled, xStart, yStart, x, y, selectedColor, toolSize);
+                break;
+            case 1: //
+                canvas.drawCircle(shapeFilled, xStart, yStart, x, y, selectedColor, toolSize);
+                break;
+            case 2: //Triangle
+                canvas.drawTriangle(shapeFilled, xStart, yStart, x, y, selectedColor, toolSize);
+                break;
+            case 3: //Star
+                canvas.drawStar(shapeFilled, xStart, yStart, x, y, selectedColor, toolSize);
+                break;
+            case 4: //Brush
+                currentLine.LineTo(x, y);
+                break;
+            case 5: //Straight Line
+                currentLine.DeletePath();
+                currentLine.MoveTo(xStart, yStart);
+                currentLine.LineTo(x, y);
+                break;
+        }
+        canvas.invalidate();
     }
 
     private void touchEnd()
     {
-        currentLine = null;
+        if((selectedTool >= 0) && (selectedTool <= 3))
+        {
+            canvas.StoreShape();
+        }
+        else if((selectedTool >= 4) && (selectedTool <= 5))
+        {
+            currentLine = null;
+        }
+        canvas.invalidate();
     }
 }
