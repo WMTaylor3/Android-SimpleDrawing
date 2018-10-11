@@ -1,6 +1,7 @@
 package com.example.william.simpledrawing;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,13 +31,9 @@ public class EditImage extends AppCompatActivity
         canvas = findViewById(R.id.drawableView);
 
         Intent intent = getIntent();
-        boolean photoBackground = intent.getBooleanExtra("photoBackground", false);
-        if(photoBackground)
+        if(intent.getBooleanExtra("photoBackground", false))
         {
-            final Uri imageURI = Uri.parse(intent.getStringExtra("Location"));
-            final Integer imageRotation = intent.getIntExtra("Orientation", 0);
-            final Float imageScale = intent.getFloatExtra("Scale", 1.0f);
-            canvas.setBackgroundImage(imageURI, imageRotation, imageScale);
+            canvas.setBackgroundImage(//TODO: SOMETHING HERE);
         }
 
         FloatingActionButton openColorPicker = findViewById(R.id.openColorPicker);
@@ -54,16 +51,6 @@ public class EditImage extends AppCompatActivity
             }
         });
 
-        FloatingActionButton saveImage = findViewById(R.id.saveImage);
-        saveImage.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                canvas.saveBitmap();
-            }
-        });
-
         FloatingActionButton openToolPicker = findViewById(R.id.openToolPicker);
         openToolPicker.setOnClickListener(new View.OnClickListener()
         {
@@ -76,6 +63,36 @@ public class EditImage extends AppCompatActivity
                 intent.putExtra("filled", shapeFilled);
 
                 startActivityForResult(intent, 2);
+            }
+        });
+
+        FloatingActionButton undoLast = findViewById(R.id.undoLast);
+        undoLast.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                canvas.UndoLast();
+            }
+        });
+
+        FloatingActionButton undoAll = findViewById(R.id.undoAll);
+        undoAll.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                canvas.UndoAll();
+            }
+        });
+
+        FloatingActionButton saveImage = findViewById(R.id.saveImage);
+        saveImage.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                canvas.saveBitmap();
             }
         });
     }

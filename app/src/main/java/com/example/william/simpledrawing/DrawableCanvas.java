@@ -2,14 +2,17 @@ package com.example.william.simpledrawing;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -33,6 +36,7 @@ public class DrawableCanvas extends View
     @Override
     protected void onDraw(Canvas canvas)
     {
+        super.onDraw(canvas);
         for(DrawableShape s : listOfShapes)
         {
             s.Draw(canvas);
@@ -59,12 +63,11 @@ public class DrawableCanvas extends View
         super(context, attrs, defStyleAttr);
     }
 
-    public void setBackgroundImage(Uri imageURI, Integer imageRotation, float imageScale)
+    public void setBackgroundImage(//Something here)
     {
         try
         {
-            Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageURI);
-            BitmapDrawable bitmapDrawable = new BitmapDrawable(getContext().getResources(), bitmap);
+            BitmapDrawable bitmapDrawable = new BitmapDrawable(getContext().getResources(), //TODO Fix this.);
             this.setBackground(bitmapDrawable);
         }
         catch(Exception e)
@@ -132,6 +135,21 @@ public class DrawableCanvas extends View
     {
         listOfShapes.add(newShape);
         newShape = null;
+    }
+
+    public void UndoLast()
+    {
+        if(listOfShapes.size() > 0)
+        {
+            listOfShapes.remove(listOfShapes.size()-1);
+        }
+        invalidate();
+    }
+
+    public void UndoAll()
+    {
+        listOfShapes.clear();
+        invalidate();
     }
 
     public void saveBitmap()

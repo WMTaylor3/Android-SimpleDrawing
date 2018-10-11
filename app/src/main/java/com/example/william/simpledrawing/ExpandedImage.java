@@ -2,6 +2,7 @@
 package com.example.william.simpledrawing;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -42,11 +43,10 @@ public class ExpandedImage extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+                imageView.buildDrawingCache();
                 Intent intent = new Intent(ExpandedImage.this, EditImage.class);
                 intent.putExtra("photoBackground", true);
-                intent.putExtra("Location", stringLocation);
-                intent.putExtra("Orientation", imageRotation);
-                intent.putExtra("Scale", scaleFactor);
+                //TODO: Add the bitmap in some how.
                 startActivity(intent);
             }
         });
