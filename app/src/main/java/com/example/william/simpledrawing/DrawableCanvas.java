@@ -17,6 +17,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 import java.io.File;
@@ -64,17 +65,9 @@ public class DrawableCanvas extends View
         super(context, attrs, defStyleAttr);
     }
 
-    public void setBackgroundImage(Bitmap bitmap)
+    public void drawImage(int xStart, int yStart, int xEnd, int yEnd, Uri imageURI)
     {
-        try
-        {
-            BitmapDrawable bitmapDrawable = new BitmapDrawable(getContext().getResources(), bitmap);
-            this.setBackground(bitmapDrawable);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
+        newShape = new DrawableImage(xStart, yStart, xEnd, yEnd, imageURI);
     }
 
     public void drawRectangle(boolean filled, int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)

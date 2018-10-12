@@ -13,7 +13,11 @@
         android:layout_height="match_parent"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
-        android:contentDescription="@string/photo_expanded" >
+        android:contentDescription="@string/photo_expanded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
     </ImageView>
 
     <android.support.design.widget.FloatingActionButton

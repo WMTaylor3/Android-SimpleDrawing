@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ExpandedImage">
+            android:name=".ExpandedImage"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".EditImage"

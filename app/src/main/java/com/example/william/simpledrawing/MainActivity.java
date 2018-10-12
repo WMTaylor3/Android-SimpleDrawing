@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 Intent intent = new Intent(MainActivity.this, EditImage.class);
-                intent.putExtra("photoBackground", false);
+                intent.putExtra("BackgroundExists", false);
                 startActivity(intent);
             }
         });

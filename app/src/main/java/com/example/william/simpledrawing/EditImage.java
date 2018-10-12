@@ -1,13 +1,12 @@
 package com.example.william.simpledrawing;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -32,18 +31,21 @@ public class EditImage extends AppCompatActivity
         canvas = findViewById(R.id.drawableView);
 
         Intent intent = getIntent();
-        if(intent.getBooleanExtra("photoBackground", false))
+        if(intent.getBooleanExtra("BackgroundExists", false))
         {
-            Bitmap bitmap = PersistentBitmap.getBitmap();
-            int rotation = PersistentBitmap.getRotation();
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            int height = displayMetrics.heightPixels;
+            int width = displayMetrics.widthPixels;
 
-            Matrix matrix = new Matrix();
+            String stringLocation = intent.getStringExtra("Location");
+            Uri imageURI = Uri.parse(stringLocation);
+            int xStart = intent.getIntExtra("xStart", 0);
+            int yStart = intent.getIntExtra("yStart", 0);
+            int xEnd = intent.getIntExtra("xEnd", width);
+            int yEnd = intent.getIntExtra("yEnd", height);
 
-            matrix.postRotate(rotation);
-
-            Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-
-            canvas.setBackgroundImage(rotatedBitmap);
+            canvas.drawImage(xStart, yStart, xEnd, yEnd, imageURI);
         }
 
         FloatingActionButton openColorPicker = findViewById(R.id.openColorPicker);

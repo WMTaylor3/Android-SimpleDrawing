@@ -1,6 +1,7 @@
 package com.example.william.simpledrawing;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 
 abstract class DrawableShape
 {
@@ -11,6 +12,16 @@ abstract class DrawableShape
     protected int yEnd;
     protected int color;
     protected int stroke;
+
+    DrawableShape(int xStart, int yStart, int xEnd, int yEnd)
+    {
+        this.xStart = xStart;
+        this.yStart = yStart;
+        this.xEnd = xEnd;
+        this.yEnd = yEnd;
+        this.color = Color.BLACK;
+        this.stroke = 1;
+    }
 
     DrawableShape(int xStart, int yStart, int xEnd, int yEnd, int color)
     {
