@@ -1,3 +1,5 @@
+//Similar functionality to the ToolPicker class but instead of an iteger representing a tool it returns an integer representing the color.
+
 package com.example.william.simpledrawing;
 
 import android.content.Intent;

@@ -1,24 +1,17 @@
+//The canvas upon which all the shapes are drawn and stored.
+
 package com.example.william.simpledrawing;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -31,9 +24,9 @@ import java.util.Locale;
 public class DrawableCanvas extends View
 {
     // -- Variables -- //
-    private ArrayList<DrawableShape> listOfShapes = new ArrayList<>();
-    private DrawableImage background;
-    private DrawableShape newShape;
+    private ArrayList<DrawableShape> listOfShapes = new ArrayList<>(); //List of all shapes previously drawn.
+    private DrawableImage background; //The background image, kept seperate so that it won't be affected by the "undo" or "delete all".
+    private DrawableShape newShape; //The current shape being drawn.
 
     // -- Override Methods -- //
     @Override

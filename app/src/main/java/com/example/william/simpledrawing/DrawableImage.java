@@ -1,3 +1,5 @@
+//Only used for the background image, takes an image URI, converts it to a bitmap and scales it to fit on the screen.
+
 package com.example.william.simpledrawing;
 
 import android.graphics.Bitmap;

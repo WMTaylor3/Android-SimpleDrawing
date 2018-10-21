@@ -154,7 +154,7 @@ public class EditImage extends AppCompatActivity
     }
 
     // -- User Defined Methods -- //
-    private void touchBegin(int x, int y)
+    private void touchBegin(int x, int y) //Sets shape start point, top left corner.
     {
         xStart = x;
         yStart = y;
@@ -168,7 +168,7 @@ public class EditImage extends AppCompatActivity
         canvas.invalidate();
     }
 
-    private void touchMove(int x, int y)
+    private void touchMove(int x, int y) //Updates the display so the user can see the shape being drawn as their finger moved.
     {
         switch(selectedTool)
         {
@@ -196,7 +196,7 @@ public class EditImage extends AppCompatActivity
         canvas.invalidate();
     }
 
-    private void touchEnd()
+    private void touchEnd() //Stores the shape to the list of shapes.
     {
         if((selectedTool >= 0) && (selectedTool <= 3))
         {

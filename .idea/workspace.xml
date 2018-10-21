@@ -18,23 +18,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3f51f78-ec40-4224-8161-1c53ff3f6d19" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ColorPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ColorPicker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableShape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/PersistentBitmap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/photo_expanded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ToolPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ToolPicker.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -122,48 +111,38 @@
       <file leaf-file-name="EditImage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state relative-caret-position="613">
+              <caret line="198" column="69" selection-start-line="198" selection-start-column="69" selection-end-line="198" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#onCreate#0;class#EditImage#0" />
+                <element signature="method#onActivityResult#0;class#EditImage#0" />
+                <element signature="method#onTouchEvent#0;class#EditImage#0" />
+                <element signature="method#touchBegin#0;class#EditImage#0" />
+                <element signature="method#touchMove#0;class#EditImage#0" />
+                <element signature="method#touchEnd#0;class#EditImage#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrawableCanvas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java">
+      <file leaf-file-name="ToolPicker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ToolPicker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+            <state relative-caret-position="15">
+              <caret line="1" column="98" selection-start-line="1" selection-start-column="98" selection-end-line="1" selection-end-column="98" />
               <folding>
-                <element signature="method#onDraw#0;class#DrawableCanvas#0" />
-                <element signature="method#DrawableCanvas#2;class#DrawableCanvas#0" />
-                <element signature="method#drawImage#0;class#DrawableCanvas#0" />
-                <element signature="method#drawRectangle#0;class#DrawableCanvas#0" />
-                <element signature="method#drawCircle#0;class#DrawableCanvas#0" />
-                <element signature="method#drawTriangle#0;class#DrawableCanvas#0" />
-                <element signature="method#drawStar#0;class#DrawableCanvas#0" />
-                <element signature="method#newLine#0;class#DrawableCanvas#0" />
-                <element signature="method#StoreShape#0;class#DrawableCanvas#0" />
-                <element signature="method#UndoLast#0;class#DrawableCanvas#0" />
-                <element signature="method#UndoAll#0;class#DrawableCanvas#0" />
-                <element signature="method#saveBitmap#0;class#DrawableCanvas#0" />
+                <element signature="e#0#6763#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrawableImage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableImage.java">
+      <file leaf-file-name="ColorPicker.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ColorPicker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1143#1144#0" expanded="true" />
-                <element signature="e#1206#1207#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="138" selection-start-column="138" selection-end-column="138" />
             </state>
           </provider>
         </entry>
@@ -2455,7 +2434,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableStarOutline.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tool_picker.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ToolPicker.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/usr_line.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableStraightLine.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableLine.java" />
@@ -2465,13 +2443,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/PersistentBitmap.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/usr_image.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableShape.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/photo_expanded.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableShape.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableImage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ToolPicker.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ColorPicker.java" />
       </list>
     </option>
   </component>
@@ -2524,7 +2504,8 @@
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="simpledrawing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Android-SimpleDrawing" type="b2602c69:ProjectViewProjectNode" />
@@ -2790,6 +2771,12 @@
           <caret line="47" column="67" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onCreate#0;class#EditImage#0" />
+            <element signature="method#onActivityResult#0;class#EditImage#0" />
+            <element signature="method#onTouchEvent#0;class#EditImage#0" />
+            <element signature="method#touchBegin#0;class#EditImage#0" />
+            <element signature="method#touchMove#0;class#EditImage#0" />
+            <element signature="method#touchEnd#0;class#EditImage#0" />
           </folding>
         </state>
       </provider>
@@ -2877,6 +2864,12 @@
           <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onCreate#0;class#EditImage#0" />
+            <element signature="method#onActivityResult#0;class#EditImage#0" />
+            <element signature="method#onTouchEvent#0;class#EditImage#0" />
+            <element signature="method#touchBegin#0;class#EditImage#0" />
+            <element signature="method#touchMove#0;class#EditImage#0" />
+            <element signature="method#touchEnd#0;class#EditImage#0" />
           </folding>
         </state>
       </provider>
@@ -3051,16 +3044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ToolPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="215" column="13" lean-forward="true" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="13" />
-          <folding>
-            <element signature="class#3535:4057" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableStraightLine.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableLine.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -3109,16 +3092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ExpandedImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445">
@@ -3137,13 +3110,6 @@
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ColorPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="88" column="66" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="66" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
@@ -3178,20 +3144,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableShape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="15">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+        <state relative-caret-position="285">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
             <element signature="method#onDraw#0;class#DrawableCanvas#0" />
             <element signature="method#DrawableCanvas#2;class#DrawableCanvas#0" />
@@ -3209,15 +3187,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/DrawableImage.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/EditImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="613">
+          <caret line="198" column="69" selection-start-line="198" selection-start-column="69" selection-end-line="198" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="method#onCreate#0;class#EditImage#0" />
+            <element signature="method#onActivityResult#0;class#EditImage#0" />
+            <element signature="method#onTouchEvent#0;class#EditImage#0" />
+            <element signature="method#touchBegin#0;class#EditImage#0" />
+            <element signature="method#touchMove#0;class#EditImage#0" />
+            <element signature="method#touchEnd#0;class#EditImage#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ToolPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="98" selection-start-line="1" selection-start-column="98" selection-end-line="1" selection-end-column="98" />
+          <folding>
+            <element signature="e#0#6763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/william/simpledrawing/ColorPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="138" selection-start-column="138" selection-end-column="138" />
         </state>
       </provider>
     </entry>

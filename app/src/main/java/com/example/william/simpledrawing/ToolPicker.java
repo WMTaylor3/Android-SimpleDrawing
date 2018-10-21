@@ -1,3 +1,6 @@
+//Floating activity called from Edit Image, returns an integer indicating the current tool.
+// From there the edit image class calls the appropriate method when the user draws to the screen.
+
 package com.example.william.simpledrawing;
 
 import android.content.Intent;

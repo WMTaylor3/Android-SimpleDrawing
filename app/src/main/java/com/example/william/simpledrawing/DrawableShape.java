@@ -1,3 +1,6 @@
+//Abstract class to provide common fields and "Draw" method to all the shapes which inherit from it.
+//Used for purposes of polymorphism so that each shape the user draws can be stored in a lost of shapes and run through when being drawn to screen.
+
 package com.example.william.simpledrawing;
 
 import android.graphics.Canvas;
