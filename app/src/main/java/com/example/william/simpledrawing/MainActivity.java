@@ -122,14 +122,18 @@ public class MainActivity extends AppCompatActivity
             }
         };
 
+        //--------------------------------------------------------------------------------------------//
+        //---CODE WRITTEN FOR ASSIGNMENT 3 BETWEEN THIS START COMMENT AND CORRESPONDING END COMMENT---//
+        //--------------------------------------------------------------------------------------------//
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                Intent intent = new Intent(MainActivity.this, ExpandedImage.class);
+                Intent intent = new Intent(MainActivity.this, EditImage.class);
                 String imageLocation = listOfImageDetails.get(position).path;
                 Integer imageRotation = listOfImageDetails.get(position).orientation;
+                intent.putExtra("BackgroundExists", true);
                 intent.putExtra("Location", imageLocation);
                 intent.putExtra("Orientation", imageRotation);
 
@@ -137,9 +141,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        //--------------------------------------------------------------------------------------------//
-        //---CODE WRITTEN FOR ASSIGNMENT 3 BETWEEN THIS START COMMENT AND CORRESPONDING END COMMENT---//
-        //--------------------------------------------------------------------------------------------//
         FloatingActionButton newDrawing = findViewById(R.id.newImage);
         newDrawing.setOnClickListener(new View.OnClickListener()
         {

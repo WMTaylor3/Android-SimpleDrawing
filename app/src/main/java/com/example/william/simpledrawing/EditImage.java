@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -40,12 +41,13 @@ public class EditImage extends AppCompatActivity
 
             String stringLocation = intent.getStringExtra("Location");
             Uri imageURI = Uri.parse(stringLocation);
+            int orientation = intent.getIntExtra("Orientation", 0);
             int xStart = intent.getIntExtra("xStart", 0);
             int yStart = intent.getIntExtra("yStart", 0);
             int xEnd = intent.getIntExtra("xEnd", width);
             int yEnd = intent.getIntExtra("yEnd", height);
 
-            canvas.drawImage(xStart, yStart, xEnd, yEnd, imageURI);
+            canvas.drawImage(xStart, yStart, xEnd, yEnd, imageURI, orientation);
         }
 
         FloatingActionButton openColorPicker = findViewById(R.id.openColorPicker);

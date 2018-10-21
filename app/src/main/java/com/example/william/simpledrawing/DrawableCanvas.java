@@ -32,6 +32,7 @@ public class DrawableCanvas extends View
 {
     // -- Variables -- //
     private ArrayList<DrawableShape> listOfShapes = new ArrayList<>();
+    private DrawableImage background;
     private DrawableShape newShape;
 
     // -- Override Methods -- //
@@ -39,6 +40,10 @@ public class DrawableCanvas extends View
     protected void onDraw(Canvas canvas)
     {
         super.onDraw(canvas);
+        if(background != null)
+        {
+            background.Draw(canvas);
+        }
         for(DrawableShape s : listOfShapes)
         {
             s.Draw(canvas);
@@ -65,9 +70,9 @@ public class DrawableCanvas extends View
         super(context, attrs, defStyleAttr);
     }
 
-    public void drawImage(int xStart, int yStart, int xEnd, int yEnd, Uri imageURI)
+    public void drawImage(int xStart, int yStart, int xEnd, int yEnd, Uri imageURI, int orientation)
     {
-        newShape = new DrawableImage(xStart, yStart, xEnd, yEnd, imageURI);
+        background = new DrawableImage(xStart, yStart, xEnd, yEnd, imageURI, orientation);
     }
 
     public void drawRectangle(boolean filled, int xStart, int yStart, int xEnd, int yEnd, int color, int stroke)
